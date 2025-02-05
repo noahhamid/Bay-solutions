@@ -3,7 +3,7 @@ import Button from "./button";
 const NavBar = () => {
   return (
     <div className="relative text-white capitalize pt-[20px]">
-      <div className="sticky border-t border-b border-[#50505f] py-2 flex justify-between items-center">
+      <div className="border-t border-b border-[#50505f] py-2 flex justify-between items-center">
         {/* logo */}
         <h1>Bay solution</h1>
         {/* navigation */}
