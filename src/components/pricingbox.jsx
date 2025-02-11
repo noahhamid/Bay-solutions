@@ -2,11 +2,11 @@ import Button from "./button";
 import checkmark from "../assets/icons/checkmark.svg";
 
 
-const PricingBox = ({price1,price2, text1, text2, text3, text4, text5, text6, text7 ,img , className , disc}) => {
+const PricingBox = ({mode,price1,price2, text1, text2, text3, text4, text5, text6, text7 ,img , className , disc}) => {
   return (
-    <div className="  bg-[#151c3b] rounded-xl py-10 mt-10 border border-[#858282] w-[330px]">
-      <div className="px-7">
-        <h1 className="text-white font-bold text-[20px] pb-5">Basic</h1>
+    <div className="  bg-[#151c3b] rounded-xl py-10 mt-10 border border-[#858282] lg:w-[330px]">
+      <div className="px-5">
+        <h1 className="text-white font-bold text-[20px] pb-5">{mode}</h1>
         <h1 className="text-customGreen font-bold text-[15px] line-through">
           {price1}
         </h1>
