@@ -18,7 +18,7 @@ import About from "./components/about"; // About page import
 const App = () => {
   return (
     <Router>
-      <div className="bg-gradient-to-tl from-[#0c3045] to-[#1d1e39] min-h-screen font-poppins md:px-8 xl:px-24">
+      <div className="bg-gradient-to-tl from-[#0c3045] to-[#1d1e39] min-h-screen max-w-screen font-poppins md:px-8 xl:px-24">
         <NavBar />
         <Routes>
           {/* This is the route for the homepage which has all sections */}

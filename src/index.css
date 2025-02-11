@@ -6,6 +6,13 @@
 html {
   scroll-behavior: smooth;
 }
+/* In your global stylesheet or a relevant CSS file */
+html, body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  margin: 0; /* Ensures no default margin */
+  padding: 0; /* Ensures no default padding */
+}
+
 
 
 /* Infinite scrolling animation */

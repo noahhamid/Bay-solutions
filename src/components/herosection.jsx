@@ -32,7 +32,7 @@ const AnimatedText = ({ text, delayIndex }) => {
 
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center py-10 text-center lg:text-left mx-5 pt- lg:pt-[250px] md:mx-0 lg:px-5">
+    <div className="flex flex-col lg:flex-row justify-between items-center py-10 text-center lg:text-left mx-5 pt-20 lg:pt-[250px] md:mx-0 lg:px-5">
       <div className="flex flex-col gap-5 lg:gap-2 lg:w-[45%]">
         {/* Quote Animation (Framer Motion) */}
         <div className="capitalize text-white text-[30px] xl:text-[40px]">
