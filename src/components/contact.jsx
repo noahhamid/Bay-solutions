@@ -96,19 +96,19 @@ const Contact = () => {
               Contact <span className="text-customGreen">us</span>
             </motion.h1>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium">
+              <label htmlFor="email" className="text-customTitle block text-sm font-medium">
                 Email
               </label>
               <input
                 id="email"
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 mt-2 text-[14px] bg-customBlue text-customTitle border-none rounded-lg focus:outline-none focus:border-customGreen focus:ring-1 focus:ring-customGreen duration-500"
+                className="w-full px-4 py-3 mt-2 text-[14px] bg-customBlue text-white border-none rounded-lg focus:outline-none focus:border-customGreen focus:ring-1 focus:ring-customGreen duration-500"
               />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium">
+              <label htmlFor="name" className="text-customTitle block text-sm font-medium">
                 Name
               </label>
               <input
@@ -120,7 +120,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="message" className="block text-sm font-medium">
+              <label htmlFor="message" className="text-customTitle block text-sm font-medium">
                 Message
               </label>
               <textarea
