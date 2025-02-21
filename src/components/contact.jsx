@@ -95,6 +95,7 @@ const Contact = () => {
             >
               Contact <span className="text-customGreen">us</span>
             </motion.h1>
+            git remote -v
 
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium">
