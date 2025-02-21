@@ -1,29 +1,100 @@
-// src/components/contact.js
 import React from "react";
+import { motion } from "framer-motion";
 import Footer from "./footer";
 
 const Contact = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.05 }, // Faster stagger time
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.2 } }, // Faster duration
+  };
+
+  // Helper function to split text into individual letters and preserve spaces
+  const splitText = (text) => {
+    return text.split("").map((char, index) => {
+      if (char === " ") {
+        return (
+          <span key={index} className="inline-block">
+            &nbsp;
+          </span>
+        ); // Keep space intact
+      } else {
+        return (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            className="inline-block"
+          >
+            {char}
+          </motion.span>
+        );
+      }
+    });
+  };
+
   return (
     <div>
-      <div className="pt-[150px] flex flex-col lg:flex-row justify-between  lg:px-10">
+      <div className="pt-[150px] flex flex-col lg:flex-row justify-between lg:px-10">
         <div className="space-y-4 lg:mt-10 px-5">
           <div className="flex items-center text-customTitle gap-4 uppercase text-[12px] md:text-[14px]">
             <h1 className="w-[10px] h-[10px] bg-customGreen rounded-sm"></h1>
             <h1>contacts</h1>
           </div>
-          <h1 className="text-white text-[30px] md:text-[35px] lg:text-[40px]">
-            Got something to
-            <span className="text-customGreen block">tell us?</span>
-          </h1>
-          <h1 className="text-[13px] lg:text-[15px] text-customTitle">
+
+          {/* Animate the text "Got something to tell us?" */}
+          <motion.h1
+            className="text-white text-[30px] md:text-[35px] lg:text-[40px]"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {splitText("Got something to")}
+            <span className="text-customGreen block">
+              {splitText("tell us?")}
+            </span>
+          </motion.h1>
+
+          <motion.h1
+            className="text-[13px] lg:text-[15px] text-customTitle"
+            variants={{
+              hidden: { opacity: 0, y: 50 }, // Start below the normal position and invisible
+              visible: {
+                opacity: 1,
+                y: 0, // Move to the normal position
+                transition: { duration: 0.5, delay: 1 }, // Adjust duration for the animation
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+          >
             Why not send us a message? We're always here to help.
-          </h1>
+          </motion.h1>
         </div>
-        <div className="bg-[#283F58] lg:w-[550px] mt-10 lg:mt-0 px-7 py-10 rounded-2xl">
+
+        {/* Form container with slide-in from the right */}
+        <motion.div
+          className="bg-[#283F58] lg:w-[550px] mt-10 lg:mt-0 px-7 py-10 rounded-2xl"
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 50 }}
+        >
           <form>
-            <h1 className="text-white text-[30px] mb-5">
+            <motion.h1
+              className="text-white text-[30px] mb-5"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               Contact <span className="text-customGreen">us</span>
-            </h1>
+            </motion.h1>
 
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium">
@@ -68,7 +139,7 @@ const Contact = () => {
               Send
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
       <Footer />
     </div>

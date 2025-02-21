@@ -53,7 +53,9 @@ const Why_us = () => {
         transition={{ duration: 0.5, ease: "easeOut" }} // Apply smooth animation
         className="lg:text-center mt-2 md:mt-0 text-white text-[20px] md:text-[25px] lg:text-[30px] "
       >
-        <h1 className="animate-slideUp inline">Building Websites That Drive </h1>
+        <h1 className="animate-slideUp inline">
+          Building Websites That Drive{" "}
+        </h1>
         <h1 className="inline md:block text-customGreen animate-slideUpDelayed">
           Growth & Success
         </h1>
@@ -96,14 +98,14 @@ const Why_us = () => {
         {/* Boxes */}
         <Box
           title="A Hard Truth About Online Presence"
-          number="46%"
-          text="🚨 46% of small businesses still don’t have a website, causing them to lose potential customers and credibility."
+          number="46"
+          text="🚨 🚨 46% of small businesses still don’t have a website, causing them to lose potential customers and credibility. In today’s digital world, not having a website means missing out on opportunities to connect with customers, showcase your products, and build trust. Without an online presence, small businesses risk falling behind competitors who have taken that essential step."
         />
 
         <Box
           title="Collaboration for Growth"
           text="🔗 Companies that invest in custom-built websites tailored to their brand experience a 60% faster growth rate than those using generic templates. This keeps the messaging aligned with your company’s value. Want any refinements? 🚀"
-          number="60%"
+          number="60"
         />
       </div>
     </div>

@@ -24,6 +24,10 @@ const Footer = () => {
                 <Link to="/about">About</Link>
               </li>
               <li className="hover:text-customGreen cursor-pointer">
+                <Link to="/#service">service</Link>{" "}
+            
+              </li>
+              <li className="hover:text-customGreen cursor-pointer">
                 <Link to="/#pricing">Pricing</Link>{" "}
                 {/* This will navigate to #pricing on homepage */}
               </li>

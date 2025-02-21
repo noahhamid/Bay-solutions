@@ -2,23 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
+  overflow-x: hidden; /* Keep horizontal scrolling hidden globally */
   scroll-behavior: smooth;
 }
-/* In your global stylesheet or a relevant CSS file */
-html, body {
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  margin: 0; /* Ensures no default margin */
-  padding: 0; /* Ensures no default padding */
+
+body {
+  overflow-x: visible; /* Allow body overflow */
+  margin: 0;
+  padding: 0;
 }
 
-
+#sticky-section {
+  overflow: visible; /* Ensure that sticky div allows overflow */
+  position: sticky; /* Ensure sticky behavior works */
+  top: 80px; /* Adjust this value as needed */
+  z-index: 10; /* Ensure it stays above other content */
+}
 
 /* Infinite scrolling animation */
 .animate-scroll {
   display: flex;
-  
+
   animation: scroll 30s linear infinite;
 }
 
@@ -30,7 +35,6 @@ html, body {
     transform: translateX(-100%);
   }
 }
-
 
 .fadeInUp {
   opacity: 0;
@@ -188,7 +192,7 @@ html, body {
 }
 
 .fade-in-right {
-  animation: fadeInRight 0.2s ;
+  animation: fadeInRight 0.2s;
 }
 
 @keyframes fadeInRight {
@@ -201,7 +205,6 @@ html, body {
     transform: translateX(0);
   }
 }
-
 
 @keyframes fadeInFromRight {
   0% {
@@ -230,7 +233,6 @@ html, body {
   animation: fadeInFromRight 1s ease-out forwards;
 }
 
-
 /* Define the keyframes for the animation */
 @keyframes fadeInFromTop {
   0% {
@@ -246,11 +248,9 @@ html, body {
 /* Apply the animation to the div */
 .fade-in-from-top {
   opacity: 0; /* Make the element invisible initially */
-  animation: fadeInFromTop .5s ease-out forwards;
+  animation: fadeInFromTop 0.5s ease-out forwards;
   animation-delay: 1.5s; /* Delay the animation by 1 second */
 }
-
-
 
 @keyframes slideInFromRight {
   0% {
@@ -264,5 +264,5 @@ html, body {
 }
 
 .slide-in-from-right {
-  animation: slideInFromRight 1s ease-out forwards; 
+  animation: slideInFromRight 1s ease-out forwards;
 }

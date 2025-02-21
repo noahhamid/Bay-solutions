@@ -32,7 +32,7 @@ const App = () => {
                 <div id="why-us">
                   <Why_us />
                 </div>
-                <div id="offer">
+                <div id="service">
                   <Offer />
                 </div>
                 <div id="partners">

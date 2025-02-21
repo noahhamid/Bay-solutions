@@ -61,71 +61,27 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Split the "What do you ..." sentence into letters
-  const titleText = "What do you";
-  const subtitleText = "need to know?";
-  const titleLetters = titleText.split("");
-  const subtitleLetters = subtitleText.split("");
-
   return (
     <div className="relative lg:mx-5 mt-20 px-4 text-white flex justify-between">
       {/* FAQ Section Container */}
       <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row items-start justify-between w-full max-w-screen-xl">
         {/* Sticky Section */}
-        <div className="lg:sticky top-[80px] z-10 self-start">
+        <div
+          id="sticky-section"
+          className="lg:sticky top-[80px] z-10 self-start"
+        >
           <div className="flex items-center text-customTitle gap-4 uppercase text-[12px] md:text-[14px]">
             <h1 className="w-[10px] h-[10px] bg-customGreen rounded-sm"></h1>
             <h1>Frequently asked questions</h1>
           </div>
           <h1 className=" text-[25px] md:text-[45px] text-white mt-3">
-            {/* Title letters fade-in animation */}
-            <motion.span
-              className="block"
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              {titleLetters.map((letter, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    delay: index * 0.1, // Staggered delay for each letter
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
-
-            <motion.span
-              className="block text-customGreen mt-[-10px]"
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              {subtitleLetters.map((letter, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    delay: index * 0.1 + titleLetters.length * 0.1, // Add delay after the first text
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
+            {/* Title without animation */}
+            What do you
+            <span className="text-customGreen mt-[-10px] block"> need to know?</span>
           </h1>
           <p className="md:w-[400px] mt-3 md:mt-0 text-customTitle text-[13px] md:text-[14px]">
-            Check the FAQ for answers. If you still have questions, reach out and
-            chat with us anytime.
+            Check the FAQ for answers. If you still have questions, reach out
+            and chat with us anytime.
           </p>
         </div>
 
@@ -141,7 +97,9 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
-                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+                <span className="text-xl">
+                  {openIndex === index ? "−" : "+"}
+                </span>
               </button>
 
               <motion.div

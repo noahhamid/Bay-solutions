@@ -34,6 +34,7 @@ export default function Testimonial() {
       autoplay: 3000,
       animationDuration: 700,
       gap: 24,
+      rewind: false, // Enables infinite loop (no rewind)
       classNames: {
         nav: {
           active: "[&>*]:bg-wuiSlate-700",
@@ -48,6 +49,11 @@ export default function Testimonial() {
         },
       },
     }).mount();
+
+    // Delay the visibility animations to trigger after Glide initializes
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 700); // Delay for 700ms to allow Glide to finish its transition
 
     return () => {
       slider.destroy();
@@ -76,16 +82,41 @@ export default function Testimonial() {
       <div className="overflow-hidden" data-glide-el="track">
         <ul className="relative flex w-full overflow-hidden p-0">
           {[
-            { name: "John Doe", description: "This is an amazing service!" },
-            { name: "Jane Smith", description: "I love the user experience!" },
             {
-              name: "Alice Brown",
-              description: "Highly recommend to everyone!",
+              name: "Nahom Aferwerk",
+              description:
+                "Bay Solution delivered a website that truly represents our business. Their expertise made the process smooth and easy. We love the result! 🚀",
             },
-            { name: "Bob Johnson", description: "Great quality and support!" },
             {
-              name: "Emily Davis",
-              description: "The best decision I ever made!",
+              name: "Eyob Tigstu",
+              description:
+                "Bay Solution brought my vision to life with a modern, user-friendly website. Their attention to detail made working with them a great experience. 💻",
+            },
+            {
+              name: "Binyam Measho",
+              description:
+                "Bay Solution tailored a website for our needs. They created a seamless, visually appealing experience that engages our customers. 🤝",
+            },
+            {
+              name: "meron kebede",
+              description:
+                "Bay Solution transformed our online presence. Their creative ideas have helped our site stand out in the market. 💡",
+            },
+            {
+              name: "Kidus abebe",
+              description:
+                "Bay Solution redesigned our company website, making it beautiful and highly functional. The team worked closely with us to ensure everything was perfect. 🏢",
+            },
+            {
+              name: "Biruk desalegn",
+              description:
+                "Bay Solution developed our site. It's visually stunning, easy to navigate, and has improved our user engagement. ☁️",
+            },
+
+            {
+              name: "habtamu mekonnen",
+              description:
+                "Bay Solution built a responsive website for us that has boosted our client interactions and lead generation. 📈",
             },
           ].map((testimonial, index) => (
             <li
@@ -97,7 +128,7 @@ export default function Testimonial() {
               <h3 className="text-xl font-semibold text-customGreen">
                 {testimonial.name}
               </h3>
-              <p className="text-[white] mt-2">{testimonial.description}</p>
+              <p className="text-customTitle mt-2">{testimonial.description}</p>
             </li>
           ))}
         </ul>

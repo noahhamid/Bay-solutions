@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"; // Importing Framer Motion
-import Button from "./button";
+import black_arrow from "../assets/icons/arrow-black.svg";
+import green_arrow from "../assets/icons/arrow-green.svg";
 import LandingAnimation from "./landing_anime";
-import NavBar from "./navbar";
 
 const lines = [
   ["Your ", "Vision", ", Our ", "Code"],
@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="text-customTitle text-[13px] lg:text-[15px]">
           <span className="fadeInUp ">
             Innovative, scalable, and user-focused web solutions designed to
-            help{" "}
+            help
           </span>
           <span className="fadeInUpSecond ">
             businesses and individuals thrive in the digital world.
@@ -83,12 +83,22 @@ const Hero = () => {
           <LandingAnimation />
         </div>
         {/* Button Animation (CSS for smooth effect) */}
-        <div className="fadeInButton mt-10">
-          <Button
-            className="bg-customGreen w-full text-customBlue lg:w-fit capitalize px-10 py-3 rounded-lg text-[15px] tracking-wide hover:text-customGreen hover:bg-customBlue duration-500"
-            text="get started"
-          />
-        </div>
+        <a
+          href="#pricing"
+          className="fadeInButton mt-10 cursor-pointer w-full flex items-center gap-3 bg-customGreen text-customBlue lg:w-fit capitalize px-10 py-3 rounded-lg text-[15px] tracking-wide hover:text-customGreen hover:bg-customBlue duration-500 group"
+        >
+          <span>Get Started</span>
+          <div className="relative w-5 h-5">
+            <img
+              src={black_arrow}
+              className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+            />
+            <img
+              src={green_arrow}
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            />
+          </div>
+        </a>
       </div>
 
       {/* Hero Image */}

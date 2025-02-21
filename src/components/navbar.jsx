@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation hook
 import logo from "../assets/icons/logo.png";
 import logo_only from "../assets/icons/logo_only.png";
-import contact from "../assets/icons/contact.svg";
+import contact_black from "../assets/icons/contact-black.svg";
+import contact_green from "../assets/icons/contact-green.svg";
 import cancel from "../assets/icons/x.svg";
 import menu from "../assets/icons/menu.svg";
 
@@ -25,23 +26,23 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to pricing when the route is '/' and the location hash is '#pricing'
+  // Scroll to section when the route changes
   useEffect(() => {
-    if (location.hash === "#pricing") {
-      const element = document.getElementById("pricing");
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [location]); // Run the effect every time the route changes
-  useEffect(() => {
-    if (location.hash === "#home") {
-      const element = document.getElementById("home");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+  }, [location]); // Run effect when the route changes
+
+  // Function to handle scroll to top for specific sections
+  const handleScrollToTop = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [location]); // Run the effect every time the route changes
+  };
 
   return (
     <div>
@@ -55,22 +56,44 @@ const NavBar = () => {
       >
         <img src={logo} className="w-48" />
         <nav>
-          <ul className="flex text-white gap-20 capitalize text-[14px]">
+          <ul className="flex text-white gap-14 capitalize text-[13px]">
             <li className="hover:text-customGreen cursor-pointer">
-              <Link to="/#home">Home</Link>
+              <Link to="/#home" onClick={() => handleScrollToTop("home")}>
+                Home
+              </Link>
             </li>
             <li className="hover:text-customGreen cursor-pointer">
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </Link>
             </li>
             <li className="hover:text-customGreen cursor-pointer">
-              <Link to="/#pricing">Pricing</Link>{" "}
-              {/* This will navigate to #pricing on homepage */}
+              <Link to="/#service" onClick={() => handleScrollToTop("service")}>
+                Service
+              </Link>
+            </li>
+            <li className="hover:text-customGreen cursor-pointer">
+              <Link to="/#pricing" onClick={() => handleScrollToTop("pricing")}>
+                Pricing
+              </Link>
             </li>
           </ul>
         </nav>
         <Link to="/contact">
-          <div className="bg-customGreen flex px-2 py-[10px] rounded-lg gap-3 cursor-pointer hover:bg-customBlue duration-400 text-customBlue uppercase text-[13px] hover:text-customGreen">
-            <img src={contact} className="w-5" />
+          <div
+            onClick={() => setIsMenuOpen(false)}
+            className="bg-customGreen relative flex px-2 py-[10px] rounded-lg gap-3 cursor-pointer hover:bg-customBlue duration-500 text-customBlue uppercase text-[13px] hover:text-customGreen group"
+          >
+            <div className="relative w-5 h-5">
+              <img
+                src={contact_black}
+                className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+              />
+              <img
+                src={contact_green}
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
             <h1>Contact</h1>
           </div>
         </Link>
@@ -98,8 +121,11 @@ const NavBar = () => {
       >
         <nav className="flex flex-col items-center justify-center px-6 py-10 space-y-6">
           <Link
-            to="/"
-            onClick={() => setIsMenuOpen(false)}
+            to="/#home"
+            onClick={() => {
+              setIsMenuOpen(false);
+              handleScrollToTop("home");
+            }}
             className="text-white text-lg hover:text-customGreen"
           >
             Home
@@ -112,8 +138,21 @@ const NavBar = () => {
             About
           </Link>
           <Link
+            to="/#service"
+            onClick={() => {
+              setIsMenuOpen(false);
+              handleScrollToTop("service");
+            }}
+            className="text-white text-lg hover:text-customGreen"
+          >
+            Service
+          </Link>
+          <Link
             to="/#pricing"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              handleScrollToTop("pricing");
+            }}
             className="text-white text-lg hover:text-customGreen"
           >
             Pricing
@@ -121,9 +160,18 @@ const NavBar = () => {
           <Link to="/contact">
             <div
               onClick={() => setIsMenuOpen(false)}
-              className="bg-customGreen flex px-4 py-2 rounded-lg gap-3 cursor-pointer hover:bg-customBlue duration-400 text-customBlue uppercase text-[13px] hover:text-customGreen"
+              className="bg-customGreen relative flex px-2 py-[10px] rounded-lg gap-3 cursor-pointer hover:bg-customBlue duration-500 text-customBlue uppercase text-[13px] hover:text-customGreen group"
             >
-              <img src={contact} className="w-5" />
+              <div className="relative w-5 h-5">
+                <img
+                  src={contact_black}
+                  className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+                />
+                <img
+                  src={contact_green}
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                />
+              </div>
               <h1>Contact</h1>
             </div>
           </Link>

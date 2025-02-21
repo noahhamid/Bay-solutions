@@ -20,7 +20,7 @@ const Offer = () => {
     });
 
     // Trigger animation when the page is in view (or any other element on the page)
-    const pageElement = document.querySelector("#offer-page");
+    const pageElement = document.querySelector("#service-page");
     const rect = pageElement.getBoundingClientRect();
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
       setInView(true);
@@ -38,7 +38,7 @@ const Offer = () => {
   const titleText2 = "Offer";
 
   return (
-    <div id="offer-page">
+    <div id="service-page">
       <div className="mt-20 lg:mb-[200px] text-center text-white text-[20px] md:text-[30px] lg:text-[40px] capitalize">
         {/* Animate each letter of "Services We Offer" when the page is in view */}
         {inView && (
@@ -78,7 +78,7 @@ const Offer = () => {
           <Offer_anime />
         </div>
         <Offer_box
-          className="offer-box right-[60%] -top-[400px] right "
+          className="offer-box right-[60%] -top-[500px] right "
           title="Website Design & Development"
           text="We create custom, responsive websites tailored to your brand’s needs, ensuring your online presence is not only beautiful but also functional, with seamless mobile and desktop experiences."
         />
@@ -88,7 +88,7 @@ const Offer = () => {
           text="Our team employs effective SEO strategies to increase organic traffic, improve search engine rankings, and leverage content marketing and PPC campaigns to enhance your online visibility."
         />
         <Offer_box
-          className="offer-box right-[60%] -bottom-[400px] right "
+          className="offer-box right-[60%] -bottom-[500px] right "
           title="Website Maintenance & Support"
           text="We provide ongoing website maintenance, quick bug fixes, and performance optimization to ensure your website remains secure, fresh, and performs smoothly at all times."
         />
@@ -96,7 +96,7 @@ const Offer = () => {
           <Offer_anime />
         </div>
         <Offer_box
-          className="offer-box left-[60%] -top-[400px] left "
+          className="offer-box left-[60%] -top-[500px] left "
           title="Branding & UX/UI Design"
           text="We craft unique brand identities through custom logos and design user-friendly, visually appealing interfaces that create intuitive, engaging experiences for your website visitors."
         />
@@ -106,7 +106,7 @@ const Offer = () => {
           text="We offer secure, fast hosting and reliable domain registration services to ensure your website operates flawlessly, with high uptime and a seamless user experience."
         />
         <Offer_box
-          className="offer-box left-[60%] -bottom-[400px] left "
+          className="offer-box left-[60%] -bottom-[500px] left "
           title="Analytics & Conversion Optimization"
           text="We analyze website traffic and user behavior, optimizing key elements like CTAs and forms to increase conversions and turn visitors into long-term customers."
         />
