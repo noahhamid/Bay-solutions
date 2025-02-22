@@ -85,7 +85,7 @@ const Hero = () => {
         {/* Button Animation (CSS for smooth effect) */}
         <a
           href="#pricing"
-          className="fadeInButton mt-10 cursor-pointer w-full flex items-center gap-3 bg-customGreen text-customBlue lg:w-fit capitalize px-10 py-3 rounded-lg text-[15px] tracking-wide hover:text-customGreen hover:bg-customBlue duration-500 group"
+          className="fadeInButton mt-10 cursor-pointer  w-full flex justify-center items-center gap-3 bg-customGreen text-customBlue lg:w-fit capitalize px-10 py-3 rounded-lg text-[15px] tracking-wide hover:text-customGreen hover:bg-customBlue duration-500 group"
         >
           <span>Get Started</span>
           <div className="relative w-5 h-5">
