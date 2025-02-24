@@ -85,38 +85,74 @@ export default function Testimonial() {
             {
               name: "Nahom Aferwerk",
               description:
-                "Bay Solution delivered a website that truly represents our business. Their expertise made the process smooth and easy. We love the result! 🚀",
+                "Bey Solution delivered a website that truly represents our business. Their expertise made the process smooth and easy. We love the result! 🚀",
             },
             {
               name: "Eyob Tigstu",
               description:
-                "Bay Solution brought my vision to life with a modern, user-friendly website. Their attention to detail made working with them a great experience. 💻",
+                "Bey Solution brought my vision to life with a modern, user-friendly website. Their attention to detail made working with them a great experience. 💻",
             },
             {
               name: "Binyam Measho",
               description:
-                "Bay Solution tailored a website for our needs. They created a seamless, visually appealing experience that engages our customers. 🤝",
+                "Bey Solution tailored a website for our needs. They created a seamless, visually appealing experience that engages our customers. 🤝",
             },
             {
               name: "meron kebede",
               description:
-                "Bay Solution transformed our online presence. Their creative ideas have helped our site stand out in the market. 💡",
+                "Bey Solution transformed our online presence. Their creative ideas have helped our site stand out in the market. 💡",
             },
             {
               name: "Kidus abebe",
               description:
-                "Bay Solution redesigned our company website, making it beautiful and highly functional. The team worked closely with us to ensure everything was perfect. 🏢",
+                "Bey Solution redesigned our company website, making it beautiful and highly functional. The team worked closely with us to ensure everything was perfect. 🏢",
             },
             {
               name: "Biruk desalegn",
               description:
-                "Bay Solution developed our site. It's visually stunning, easy to navigate, and has improved our user engagement. ☁️",
+                "Bey Solution developed our site. It's visually stunning, easy to navigate, and has improved our user engagement. ☁️",
             },
 
             {
               name: "habtamu mekonnen",
               description:
-                "Bay Solution built a responsive website for us that has boosted our client interactions and lead generation. 📈",
+                "Bey Solution built a responsive website for us that has boosted our client interactions and lead generation. 📈",
+            },
+            {
+              name: "Nahom Aferwerk",
+              description:
+                "Bey Solution delivered a website that truly represents our business. Their expertise made the process smooth and easy. We love the result! 🚀",
+            },
+            {
+              name: "Eyob Tigstu",
+              description:
+                "Bey Solution brought my vision to life with a modern, user-friendly website. Their attention to detail made working with them a great experience. 💻",
+            },
+            {
+              name: "Binyam Measho",
+              description:
+                "Bey Solution tailored a website for our needs. They created a seamless, visually appealing experience that engages our customers. 🤝",
+            },
+            {
+              name: "meron kebede",
+              description:
+                "Bey Solution transformed our online presence. Their creative ideas have helped our site stand out in the market. 💡",
+            },
+            {
+              name: "Kidus abebe",
+              description:
+                "Bey Solution redesigned our company website, making it beautiful and highly functional. The team worked closely with us to ensure everything was perfect. 🏢",
+            },
+            {
+              name: "Biruk desalegn",
+              description:
+                "Bey Solution developed our site. It's visually stunning, easy to navigate, and has improved our user engagement. ☁️",
+            },
+
+            {
+              name: "habtamu mekonnen",
+              description:
+                "Bey Solution built a responsive website for us that has boosted our client interactions and lead generation. 📈",
             },
           ].map((testimonial, index) => (
             <li

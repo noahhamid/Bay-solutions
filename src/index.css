@@ -15,10 +15,24 @@ body {
 
 #sticky-section {
   overflow: visible; /* Ensure that sticky div allows overflow */
-  position: sticky; /* Ensure sticky behavior works */
-  top: 80px; /* Adjust this value as needed */
-  z-index: 10; /* Ensure it stays above other content */
+
 }
+
+.custom-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,               /* Gradient starts from the left to right */
+    blue 0%,                /* Solid blue at the left */
+    rgba(0, 0, 255, 0) 50%, /* Fades to transparent at top and bottom middle */
+    rgba(0, 0, 255, 0) 50%  /* Continue fading to transparent towards middle */
+  );
+  border-image-slice: 1;
+  pointer-events: none;
+}
+
 
 /* Infinite scrolling animation */
 .animate-scroll {

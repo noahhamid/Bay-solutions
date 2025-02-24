@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="pt-[150px] flex flex-col lg:flex-row justify-between lg:px-10">
         <div className="space-y-4 lg:mt-10 px-5">
           <div className="flex items-center text-customTitle gap-4 uppercase text-[12px] md:text-[14px]">
@@ -77,6 +77,62 @@ const Contact = () => {
           >
             Why not send us a message? We're always here to help.
           </motion.h1>
+          <motion.div
+            className="text-white text-[14px]"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 1.5 },
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: 1.6 },
+                },
+              }}
+            >
+              <h1 className="text-[#727276]">Email:</h1>
+              <h1>AgencyBey@gmail.com</h1>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: 1.7 },
+                },
+              }}
+            >
+              <h1 className="text-[#727276] mt-5">Phone Numbers:</h1>
+              <h1>+251-91147-9662</h1>
+              <h1>+251-91147-4635</h1>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: 1.8 },
+                },
+              }}
+            >
+              <h1 className="text-[#727276] mt-5">Location:</h1>
+              <h1>Addis Ababa, Kazanchis, Glory Building, 5th Floor</h1>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* Form container with slide-in from the right */}
@@ -96,7 +152,10 @@ const Contact = () => {
               Contact <span className="text-customGreen">us</span>
             </motion.h1>
             <div className="mb-4">
-              <label htmlFor="email" className="text-customTitle block text-sm font-medium">
+              <label
+                htmlFor="email"
+                className="text-customTitle block text-sm font-medium"
+              >
                 Email
               </label>
               <input
@@ -108,7 +167,10 @@ const Contact = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="name" className="text-customTitle block text-sm font-medium">
+              <label
+                htmlFor="name"
+                className="text-customTitle block text-sm font-medium"
+              >
                 Name
               </label>
               <input
@@ -120,7 +182,10 @@ const Contact = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="message" className="text-customTitle block text-sm font-medium">
+              <label
+                htmlFor="message"
+                className="text-customTitle block text-sm font-medium"
+              >
                 Message
               </label>
               <textarea

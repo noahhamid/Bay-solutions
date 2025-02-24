@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "What services does Bay Solution offer?",
+    question: "What services does Bey Solution offer?",
     answer:
       "We specialize in building professional websites for companies, offering services such as web design, front-end and back-end development, e-commerce solutions, SEO optimization, and website maintenance. Our goal is to create modern, responsive, and high-performance websites that align with your business objectives.",
   },

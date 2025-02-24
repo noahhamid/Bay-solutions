@@ -38,7 +38,7 @@ const Offer = () => {
   const titleText2 = "Offer";
 
   return (
-    <div id="service-page">
+    <div id="service-page" className=" overflow-hidden lg:overflow-visible">
       <div className="mt-20 lg:mb-[200px] text-center text-white text-[20px] md:text-[30px] lg:text-[40px] capitalize">
         {/* Animate each letter of "Services We Offer" when the page is in view */}
         {inView && (
@@ -97,7 +97,7 @@ const Offer = () => {
         </div>
         <Offer_box
           className="offer-box left-[60%] -top-[500px] left "
-          title="Branding & UX/UI Design"
+          title="System & App development"
           text="We craft unique brand identities through custom logos and design user-friendly, visually appealing interfaces that create intuitive, engaging experiences for your website visitors."
         />
         <Offer_box

@@ -45,15 +45,15 @@ const Footer = () => {
           <div>
             <h1 className="text-[#524a69] font-[500] capitalize">contact </h1>
             <ul className="text-white text-[13px] space-y-3 mt-5">
-              <li>contact@market </li>
-              <li>makers.trade</li>
+              <li>agencybey@gmail.com </li>
+              <li>beysolutions.com</li>
             </ul>
           </div>
         </div>
       </div>
       <div className="border-[#291d47] border mt-20"></div>
       <h1 className="mt-10 text text-[#524a69]">
-        &copy; {new Date().getFullYear()}Bay solutions . All rights reserved.{" "}
+        &copy; {new Date().getFullYear()}Bey solutions . All rights reserved.{" "}
       </h1>
     </div>
   );

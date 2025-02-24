@@ -41,7 +41,7 @@ const Why_us = () => {
       <div className="flex items-center gap-5">
         <div className="flex items-center text-customTitle gap-4 uppercase text-[12px] md:text-[14px]">
           <h1 className="w-[10px] h-[10px] bg-customGreen rounded-sm"></h1>
-          <h1 className="tracking-wider"> bay solution's goal</h1>
+          <h1 className="tracking-wider"> bey solution's goal</h1>
         </div>
       </div>
 
@@ -73,7 +73,7 @@ const Why_us = () => {
           >
             <AnimatedText text="Why Choose " delayIndex={0} />
             <span className="text-customGreen">
-              <AnimatedText text="Bay Solution?" delayIndex={15} />
+              <AnimatedText text="Bey Solution?" delayIndex={15} />
             </span>
           </motion.h1>
 
@@ -85,7 +85,7 @@ const Why_us = () => {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }} // Apply smooth animation
             className=" text-[13px] md:text-[15px] lg:text-[17px] lg:leading-8"
           >
-            The mission of Bay Solution is to empower businesses by delivering
+            The mission of Bey Solution is to empower businesses by delivering
             exceptional, customized websites. Our expert team collaborates
             closely with individuals, groups, and companies to create digital
             solutions that perfectly align with their goals. We aim to elevate
