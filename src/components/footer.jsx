@@ -25,7 +25,6 @@ const Footer = () => {
               </li>
               <li className="hover:text-customGreen cursor-pointer">
                 <Link to="/#service">service</Link>{" "}
-            
               </li>
               <li className="hover:text-customGreen cursor-pointer">
                 <Link to="/#pricing">Pricing</Link>{" "}
@@ -46,7 +45,7 @@ const Footer = () => {
             <h1 className="text-[#524a69] font-[500] capitalize">contact </h1>
             <ul className="text-white text-[13px] space-y-3 mt-5">
               <li>agencybey@gmail.com </li>
-              <li>beysolutions.com</li>
+              <li>beysolution.com</li>
             </ul>
           </div>
         </div>
